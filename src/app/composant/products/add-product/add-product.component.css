@@ -1,0 +1,19 @@
+.titre{
+    padding-top: 10%;
+}
+#title-table {
+    font-family: 'Popins', sans-serif;
+    font-size: 1.5rem;  
+}
+.entete{
+    width: 100% ;
+    padding: 20px ;
+}
+
+.button_click{
+    padding: 2%;
+}
+
+.form-group {
+    padding: 1%;
+}

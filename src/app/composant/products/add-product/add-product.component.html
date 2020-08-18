@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="col-md-9 colsm-6 col-xs-12">
+    <div class="panel panel-default">
+
+      <div class="col-sm-12">
+        <div class="entete">
+          <h2>Ajouter un nouveau produit</h2>
+        </div>
+      </div>
+      <div class="panel-body" *ngIf="mode==1">
+
+        <form #f="ngForm" (ngSubmit)="OnsaveProduct(f.value)">
+          <div class="form-group">
+            <label class="control-label">Nom</label>
+            <input class="form-control" type="text" name="name" ngModel>
+          </div>
+          <div class="form-group">
+            <label class="control-label">Prix</label>
+            <input class="form-control" type="number" name="price" ngModel>
+          </div>
+          <div class="form-group">
+            <label class="control-label">Quantité</label>
+            <input class="form-control" type="number" name="quantite" ngModel>
+          </div>
+          <div class="button_click">
+            <button class="btn btn-success" type="submit">Enregistrer</button>
+          </div>
+        </form>
+      </div>
+      <div class="panel-body" *ngIf="mode==2">
+        
+        <div>
+          <table class="table">
+              <tbody>
+                  <tr>
+                      <td class="success">Nom Produit </td>
+                      <td>{{currentProduct.product.name}}</td>
+                  </tr>
+                  <tr>
+                      <td class="success">Prix Produit: </td>
+                      <td>{{currentProduct.product.price}}</td>
+                  </tr>
+                  <tr>
+                      <td class="success">Quantité du Produit: </td>
+                      <td>{{currentProduct.product.quantite}}</td>
+                  </tr>
+                 
+                
+                 
+              </tbody>
+          </table>
+      </div>
+        <div class="button_click">
+          <button class="btn btn-success" (click)="OnewProduct()">Ajouter</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
